@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-link,
+.navbar-toggler,
+.navbar-toggler-icon {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.fire {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.content {
+    position: relative;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 550px;
+}
+
+.content .textBox .one,
+.content .textBox .two,
+.content .textBox .three,
+h2 {
+    letter-spacing: 4px;
+    align-items: stretch;
+    color: #f07511;
+    font-size: 3.8rem;
+    margin-bottom: 8px;
+    font-weight: 900;
+    /*font-family: 'Allison', cursive;*/
+    font-family: 'Patrick Hand', cursive;
+    /*font-family: 'Staatliches', cursive;*/
+    font-size: 60px;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: calc(1.5s * var(--i));
+    opacity: 0;
+}
+
+.content .textBox p {
+    padding-top: 15px;
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+    font-family: 'Pacifico', cursive;
+    color: rgb(83, 250, 61);
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 4.9s;
+    opacity: 0;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #fd0101;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 5.5s;
+    opacity: 0;
+}
+
+.durga {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 700px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+}
+
+
+/*responsive code*/
+
+@media (max-width: 991px) {
+    .nav-item1 {
+        display: none;
+    }
+    section {
+        padding: 150px 90px;
+    }
+    header {
+        padding: 30px;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle {
+        position: fixed;
+        border-radius: 25px;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: #9e00fa url(../mm.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .toggle.active {
+        background: #9e00fa url(../co.png);
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .durga {
+        padding-top: 100px;
+    }
+}
+
+
+/*Social media animation*/
+
+.social-icons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.social-icons a {
+    width: 18rem;
+    color: #fff;
+    background: #3b5999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    transition: all 0.5s linear;
+    transform: translateX(-14.5rem);
+}
+
+.social-icons a:hover {
+    transform: translateX(0);
+}
+
+.social-icons a .fab {
+    padding-left: 1rem;
+    font-size: 3rem;
+    animation: letszoom 3s linear alternate-reverse infinite;
+}
+
+@keyframes letszoom {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/*Colouring of the social media icons*/
+
+.social-icons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50);
+    z-index: 10;
+}
+
+.social-icons a {
+    width: 18rem;
+    background: #3b5999;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    transition: all 0.5s linear;
+    transform: translateX(-14.5rem);
+}
+
+.social-icons a:hover {
+    transform: translateX(0);
+}
+
+.social-icons a .fab {
+    padding-left: 1rem;
+    font-size: 3rem;
+    animation: letszoom 3s linear alternate-reverse infinite;
+}
+
+@keyframes letszoom {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+
+.social-icons .facebook {
+    background: darkblue;
+    border-radius: 2%;
+}
+
+.social-icons .github {
+    background: darkorchid;
+    border-radius: 2%;
+}
+
+.social-icons .instagram {
+    background: rgb(255, 0, 128);
+    border-radius: 2%;
+}
+
+
+/*Page animation*/
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-link,
+.navbar-toggler,
+.navbar-toggler-icon {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.dettttt {
+    color: rgb(133, 245, 110);
+}
+
+.side1 {
+    color: orange;
+}
+
+.side2 {
+    color: orangered;
+}
+
+.side3 {
+    color: peru;
+}
+
+.det {
+    color: rgb(250, 118, 250);
+}
+
+.vishnu {
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    max-width: 80px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.shiva {
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    max-width: 100px;
+    height: 130px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.brahma {
+    position: absolute;
+    top: 60px;
+    left: 49%;
+    max-width: 80px;
+    animation: slide_top 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.ganesh {
+    position: absolute;
+    left: 0;
+    padding-top: 1500px;
+    max-width: 100px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.saraswati {
+    position: absolute;
+    left: 0;
+    padding-top: 900px;
+    max-width: 150px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.kartik {
+    position: absolute;
+    right: 0;
+    padding-top: 1500px;
+    max-width: 130px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.laxami {
+    position: absolute;
+    right: 0;
+    padding-top: 900px;
+    max-width: 100px;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.lion {
+    position: absolute;
+    top: 2090px;
+    left: 44%;
+    max-width: 280px;
+    animation: slide_top 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.fakeimg {
+    animation: slide_top 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.container {
+    padding-top: 60px;
+    color: #fff;
+    animation: slide_right 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.container .about1 {
+    height: 200px;
+    width: 180px;
+}
+
+.container .about2 {
+    height: 250px;
+    width: 180px;
+}
+
+.fakeimg .ele {
+    height: 200px;
+    border-radius: 15px;
+}
+
+.connect {
+    color: rgb(255, 0, 128);
+}
+
+span {
+    color: rgb(250, 6, 6);
+    font-weight: 800;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+
+/*Making it responsive*/
+
+@media (max-width: 575px) {
+    .nav-item1 {
+        display: none;
+    }
+    .fakeimg .about2 {
+        visibility: visible;
+    }
+    .fakeimg .about1 {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 766px) {
+    .fakeimg .about2 {
+        display: none;
+    }
+    .fakeimg .about1 {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .brahma {
+        left: 40%;
+    }
+    .shiva {
+        top: 650px;
+        right: 0;
+    }
+    .vishnu {
+        top: 650px;
+    }
+    .ganesh {
+        padding-top: 2900px;
+    }
+    .kartik {
+        padding-top: 2900px;
+    }
+    .saraswati {
+        padding-top: 1500px;
+    }
+    .laxami {
+        padding-top: 1500px;
+    }
+    .lion {
+        display: none;
+    }
+    .container {
+        padding: 80px;
+    }
+    .fakeimg .about2 {
+        height: 250px;
+        width: 190px;
+    }
+    .a {
+        display: none;
+    }
+}
+
+
+/*Page animation*/
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

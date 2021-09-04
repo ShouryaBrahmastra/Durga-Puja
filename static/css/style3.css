@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-link,
+.navbar-toggler,
+.navbar-toggler-icon {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.w3-jumbo {
+    align-items: center;
+    color: rgb(255, 116, 2);
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+h1 {
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+h2 {
+    color: rgb(253, 194, 1);
+}
+
+.video {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.link {
+    color: rgb(238, 10, 124);
+}
+
+h1 {
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+p {
+    animation: fade_in 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+h2 {
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+span {
+    color: rgb(250, 6, 6);
+    font-weight: 800;
+}
+
+.chokho{
+    width: 350px;
+    height: 400px;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+em{
+    color: rgb(255, 166, 0);
+}
+
+
+/*Making it responsive*/
+
+@media (max-width: 991px) {
+    .nav-item1 {
+        display: none;
+    }
+    .video {
+        width: 300px;
+        height: 270px;
+    }
+}
+
+
+/*Page animation*/
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

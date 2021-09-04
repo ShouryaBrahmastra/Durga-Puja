@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.nav-link,
+.navbar-toggler,
+.navbar-toggler-icon {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.time {
+    color: crimson;
+}
+
+.show {
+    color: rgba(213, 45, 219, 0.918);
+}
+
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)), url("../day10/bdur2.gif");
+    min-height: 195%;
+}
+
+.w3 {
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(248, 224, 2);
+    font-size: 90px;
+}
+
+
+/*Making it responsive*/
+
+@media (max-width: 991px) {
+    .nav-item1 {
+        display: none;
+    }
+    .bgimg {
+        min-height: 55%;
+    }
+    .w3 {
+        font-size: 60px;
+    }
+    .deco {
+        display: none;
+    }
+}
+
+
+/*Page animation*/
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
