@@ -67,6 +67,11 @@ h2 {
     color: rgb(207, 98, 153);
 }
 
+video{
+    animation: slide_right 1s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
 
 /*Making it responsive*/
 
